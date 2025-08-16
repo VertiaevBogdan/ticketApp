@@ -8,3 +8,11 @@
 .main-bg-color {
     background: #171717;
 }
+
+.btn-main{
+    background: #111111;
+
+    :hover {
+        background: #171717;
+    }
+}

@@ -1,8 +1,39 @@
+import {Link} from "react-router";
+
 function Header(){
     return (
-        <>
-
-        </>
+        <header className=" border-gray-200 py-2.5 ">
+            <nav className="wrapper h-10 flex justify-between items-center">
+                <span className="font-bold text-white">Logo</span>
+                <ul className="inline-flex items-center space-x-11 text-base">
+                    <li>
+                        <Link to="/" className="relative text-white/40 cursor-pointer"
+                        >ТУР</Link>
+                    </li>
+                    <li>
+                        <Link to="/todolist" className="relative text-white/40 cursor-pointer"
+                        >поддержать</Link>
+                    </li>
+                    <li>
+                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        >вещдок</Link>
+                    </li>
+                    <li>
+                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        >стендапы</Link>
+                    </li>
+                    <li>
+                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        >faq</Link>
+                    </li>
+                    <li>
+                        <button className="relative bg-[#111111] px-5 py-1.5 rounded-lg
+                        text-white cursor-pointer font-bold items-center hover:bg-[#171717] duration-100"
+                        >вход</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     )
 }
 
