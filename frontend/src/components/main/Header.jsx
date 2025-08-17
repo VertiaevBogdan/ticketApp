@@ -2,9 +2,9 @@ import {Link} from "react-router";
 
 function Header(){
     return (
-        <header className=" border-gray-200 py-2.5 ">
+        <header className=" border-gray-200 py-2.5 mt-2">
             <nav className="wrapper h-10 flex justify-between items-center">
-                <span className="font-bold text-white">Logo</span>
+                <span className="font-bold text-white z-0">Logo</span>
                 <ul className="inline-flex items-center text-white/40 space-x-11">
                     <li>
                         <Link to="/" className="relative cursor-pointer"

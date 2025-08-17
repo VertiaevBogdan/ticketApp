@@ -1,8 +1,10 @@
+
+
 function Main() {
     return (
-        <>
-            <main className="bg-white"></main>
-        </>
+        <section class="relative min-h-screen w-full">
+
+        </section>
     )
 }
 

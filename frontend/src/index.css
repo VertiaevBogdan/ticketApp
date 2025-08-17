@@ -16,3 +16,8 @@
         background: #171717;
     }
 }
+
+/* styles.css */
+.bg-gradient-custom {
+    background: linear-gradient(180deg, transparent 50%, black 100%);
+}
