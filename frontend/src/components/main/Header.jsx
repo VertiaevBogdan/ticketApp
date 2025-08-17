@@ -5,25 +5,25 @@ function Header(){
         <header className=" border-gray-200 py-2.5 ">
             <nav className="wrapper h-10 flex justify-between items-center">
                 <span className="font-bold text-white">Logo</span>
-                <ul className="inline-flex items-center space-x-11 text-base">
+                <ul className="inline-flex items-center text-white/40 space-x-11">
                     <li>
-                        <Link to="/" className="relative text-white/40 cursor-pointer"
+                        <Link to="/" className="relative cursor-pointer"
                         >ТУР</Link>
                     </li>
                     <li>
-                        <Link to="/todolist" className="relative text-white/40 cursor-pointer"
+                        <Link to="/todolist" className="relative cursor-pointer"
                         >поддержать</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer"
                         >вещдок</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer"
                         >стендапы</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative text-white/40 cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer"
                         >faq</Link>
                     </li>
                     <li>
