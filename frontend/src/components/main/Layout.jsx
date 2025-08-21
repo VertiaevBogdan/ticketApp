@@ -3,6 +3,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import Main from "./Main.jsx";
 import BackgroundVideo from "./BackgroundVideo.jsx";
+import TourBanner from "./TourBanner.jsx";
 
 function Layout() {
     return (
@@ -13,6 +14,7 @@ function Layout() {
                 <Outlet/>
                 <Main/>
                 <Footer/>
+                <TourBanner/>
             </main>
         </>
     )

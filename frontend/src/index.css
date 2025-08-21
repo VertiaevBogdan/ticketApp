@@ -23,3 +23,19 @@
     inset: 0;
     position: absolute;
 }
+
+
+.border-top-line {
+    margin-top: 6.25em;
+    margin-bottom: 3.75em;
+    border-top: 0.1em dashed transparent;
+
+    border-image: repeating-linear-gradient(
+            to right,
+            #481216 0,
+            #481216 14px,   /* длина штриха */
+            transparent 14px,
+            transparent 25px /* расстояние между ними */
+    ) 100% 1;
+
+}
