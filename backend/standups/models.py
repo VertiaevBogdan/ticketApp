@@ -11,6 +11,7 @@ class Standup(models.Model):
     image = models.ImageField(upload_to='images/', null=True, blank=True)
     slag = models.SlugField(unique=True, blank=True)
     title = models.CharField(max_length=50)
+    standup_url = models.URLField(null=True, blank=True)
 
     class Meta:
         ordering = ['created_at']
