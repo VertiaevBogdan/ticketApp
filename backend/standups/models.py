@@ -12,6 +12,9 @@ class Standup(models.Model):
     slag = models.SlugField(unique=True, blank=True)
     title = models.CharField(max_length=50)
     standup_url = models.URLField(null=True, blank=True)
+    director = models.TextField(max_length=30, blank=True, null=True, default='')
+    is_featured = models.BooleanField(default=False)
+    date_of_shooting =models.TextField(max_length=30, blank=True, null=True, default='')
 
     class Meta:
         ordering = ['created_at']
@@ -26,3 +29,22 @@ class Standup(models.Model):
         if not self.slag:
             self.slag = slugify(self.title)
         super().save(*args, **kwargs)
+
+
+class StandupTour(models.Model):
+    id = models.AutoField(primary_key=True) ## упорядычевание будет формально по id
+    month = models.CharField(max_length=5)
+    month_num_day = models.CharField(max_length=2)
+    city = models.CharField(max_length=20)
+    additional_day_and_time = models.TextField(max_length=30, default='')
+    additional_place_info = models.CharField(max_length=30)
+    sold_out = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = 'Standup Tour'
+        verbose_name_plural = 'Standup Tours'
+
+    def __str__(self):
+        return self.city
+
