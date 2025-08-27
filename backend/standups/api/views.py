@@ -3,5 +3,5 @@ from .serializers import StandupCardSerializer, StandupSerializer
 from ..models import Standup
 
 class StandupCardViewSet(viewsets.ModelViewSet):
-    queryset = Standup.objects.all()
+    queryset = Standup.objects.all().order_by('-id')
     serializer_class = StandupCardSerializer
