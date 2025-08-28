@@ -18,10 +18,12 @@ function StandUpList() {
             <div class="border-top-line"></div>
             <p className="text-[2.8rem] font-bold text-[#801219] mb-[1.5rem]">предыдущие стендапы</p>
 
-            <div className="grid grid-flow-col relative"    >
+            <div className="grid grid-flow-col relative ml-12">
               {standups.map((item) => (
-                <a key={item.id} href="#" className="flex cursor-pointer ">
-                  <div className="relative transition-transform duration-250 hover:-translate-y-9">
+                <a key={item.id} href="#" className={`flex cursor-pointer -ml-12`}>
+                  <div className="relative transition-transform
+                                  duration-300 hover:-translate-y-9
+                                  hover:z-10">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -29,7 +31,7 @@ function StandUpList() {
                     />
                     <div className="standup_card inset-0 p-4
                      flex flex-col justify-end text-white
-                     hover:opacity-0 transition duration-250">
+                     hover:opacity-0 transition duration-300">
                       <h2 className="text-xl font-bold">{item.title}</h2>
                       <p>{item.city}</p>
                       <p>{item.description}</p>
