@@ -1,14 +1,24 @@
-import axios from "axios";
+import {useEffect, useState} from "react";
+import api from "../../api/api.js";
 
 function Main() {
 
     const info = [
-        { label: "продолжительность", value: "1:43:22" },
-        { label: "дата выхода", value: "20 апреля 2023" },
-        { label: "режиссер", value: "Илья Найшуллер" },
-        { label: "дата съемки", value: "23 ноября 2022" },
-        { label: "субтитры", value: "ENG" },
+      { label: "продолжительность", field: "duration" },
+      { label: "дата выхода", field: "created_at" },
+      { label: "режиссер", field: "director" },
+      { label: "дата съемки", field: "date_of_shooting" },
+      { label: "субтитры", field: "subtitles" },
     ];
+
+
+    const [mainCard, SetMainCard] = useState([]);
+
+    useEffect( () => {
+        api.get('mainStandup/')
+            .then(res => SetMainCard(res.data))
+            .catch(err => console.error(err))
+    },[]);
 
     return (
         <>
@@ -51,13 +61,17 @@ function Main() {
                     </span>
                 </div>
                 <div className="py-[43px] px-[29px] border border-white/40
-                                    rounded-3xl grid gap-[30px] font-medium w-[375px]">
-                    {info.map((item, index) => (
-                        <div key={index} className="grid grid-flow-col justify-start gap-[30px] text-[15px]">
-                            <p className="text-white/40 w-[156px]">{item.label}</p>
-                            <span className="text-white">{item.value}</span>
+                rounded-3xl grid gap-[30px] font-medium w-[375px]">
+                  {mainCard.map((item, index) => (
+                    <div key={index} className="grid gap-[30px] text-[15px]">
+                      {info.map((name, i) => (
+                        <div key={i} className="grid grid-flow-col justify-start gap-[30px]">
+                          <p className="text-white/40 w-[156px]">{name.label}</p>
+                          <span className="text-white">{item[name.field]}</span>
                         </div>
-                    ))}
+                      ))}
+                    </div>
+                  ))}
                 </div>
             </section>
         </>

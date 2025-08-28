@@ -1,9 +1,12 @@
 from rest_framework import viewsets
-from .serializers import StandupCardSerializer, StandupSerializer, StandupTourSerializer
+from .serializers import StandupCardSerializer, StandupSerializer, StandupTourSerializer, MainStandupSerializer
 from ..models import Standup, StandupTour
 
+class MainStandupCardViewSet(viewsets.ModelViewSet):
+    serializer_class = MainStandupSerializer
+    queryset = Standup.objects.filter(is_featured=True) #берём только актуальный стендап
+
 class StandupCardViewSet(viewsets.ModelViewSet):
-    #queryset = Standup.objects.all().order_by('-id')
     serializer_class = StandupCardSerializer
 
     def get_queryset(self):
