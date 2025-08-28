@@ -39,3 +39,11 @@
     ) 100% 1;
 
 }
+
+.standup_card {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.85);
+    transition: inherit;
+}
