@@ -1,3 +1,5 @@
+import axios from "axios";
+
 function Main() {
 
     const info = [
@@ -19,10 +21,11 @@ function Main() {
                     </h1>
                 </article>
             </section>
-            <section class="flex">
-                <img class="mr-11 rounded-full w-[60px] h-[60px]" src="../../../public/img/poperechnyi.png" alt="poperechnyi"/>
-                <div class="text-lg text-[#801219] flex justify-between">
-                    <div className="max-w-7/12">
+            <section class="grid justify-between gap-[60px] grid-flow-col items-start">
+                <div className="text-lg text-[#801219] grid grid-flow-col gap-[30px] max-w-[824] font-medium">
+                    <img className="rounded-full w-[60px] h-[60px]" src="../../../public/img/poperechnyi.png"
+                         alt="poperechnyi"/>
+                    <span className="">
                         <h2 className="text-3xl mb-3.5">Привет! Я Данила Поперечный.</h2>
                         <p>
                             Я занимаюсь созданием видео и стендап комедией уже больше 10 лет,
@@ -45,16 +48,16 @@ function Main() {
                         <p>Спасибо за внимание и приятного просмотра!</p>
                         <br/>
                         <p>8 апреля 2023</p>
-                    </div>
-                    <div className="py-11 px-7 border border-white/40
-                 rounded-3xl flex flex-col">
-                        {info.map((item, index) => (
-                            <div key={index}>
-                                <p className="text-white/40 ml-5">{item.label}</p>
-                                <span className="text-white">{item.value}</span>
-                            </div>
-                        ))}
-                    </div>
+                    </span>
+                </div>
+                <div className="py-[43px] px-[29px] border border-white/40
+                                    rounded-3xl grid gap-[30px] font-medium w-[375px]">
+                    {info.map((item, index) => (
+                        <div key={index} className="grid grid-flow-col justify-start gap-[30px] text-[15px]">
+                            <p className="text-white/40 w-[156px]">{item.label}</p>
+                            <span className="text-white">{item.value}</span>
+                        </div>
+                    ))}
                 </div>
             </section>
         </>
