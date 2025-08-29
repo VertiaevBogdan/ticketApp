@@ -21,17 +21,7 @@ function Main() {
     },[]);
 
     return (
-        <>
-            <section className="relative min-h-screen w-full mt-[31em]">
-                <article className="flex flex-col">
-                    <div className="text-white/40 ">18+</div>
-                    <h1 className="text-white mt-4 text-8xl font-bold">
-                        <p className="text-6xl">СТЕНДАП СПЕШЛ</p>
-                        ВЕСЕЛАЯ<span className="text-[#801219]">/</span>ЖИЗНЬ
-                    </h1>
-                </article>
-            </section>
-            <section class="grid justify-between gap-[60px] grid-flow-col items-start">
+            <section class="mt-[7em] grid justify-between gap-[60px] grid-flow-col items-start">
                 <div className="text-lg text-[#801219] grid grid-flow-col gap-[30px] max-w-[824] font-medium">
                     <img className="rounded-full w-[60px] h-[60px]" src="../../../public/img/poperechnyi.png"
                          alt="poperechnyi"/>
@@ -74,8 +64,6 @@ function Main() {
                   ))}
                 </div>
             </section>
-        </>
-
     )
 }
 

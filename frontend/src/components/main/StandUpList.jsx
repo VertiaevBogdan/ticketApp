@@ -21,8 +21,7 @@ function StandUpList() {
             <div className="grid grid-flow-col relative ml-12">
               {standups.map((item) => (
                 <a key={item.id} href="#" className={`flex cursor-pointer -ml-12`}>
-                  <div className="relative transition-transform
-                                  duration-300 hover:-translate-y-9
+                  <div className="relative transition-all ease-out duration-200 hover:-translate-y-12
                                   hover:z-10">
                     <img
                       src={item.image}
