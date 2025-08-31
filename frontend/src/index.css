@@ -47,3 +47,8 @@
     background: rgba(17, 17, 17, 0.85);
     transition: inherit;
 }
+
+.spacing {
+    letter-spacing: 0.4rem;
+    writing-mode: vertical-rl;
+}
