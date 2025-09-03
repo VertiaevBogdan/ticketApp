@@ -25,7 +25,7 @@ function Footer() {
                     <li className="pr-4"><a target="_blank"
                            rel="noopener noreferrer"
                            href="https://twitter.com/Spoontamer">
-                        <img className="h-9" src="../../../public/img/twitter.svg" alt="Twitter"/></a></li>
+                        <img className="h-7" src="../../../public/img/twitter.png" alt="Twitter"/></a></li>
                 </ul>
             </nav>
         </footer>
