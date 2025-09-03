@@ -7,7 +7,7 @@ function Header(){
                 <span className="font-bold text-white z-0">Logo</span>
                 <ul className="inline-flex items-center text-white/40 space-x-11">
                     <li>
-                        <Link to="/" className="relative cursor-pointer"
+                        <Link to="/tour" className="relative cursor-pointer"
                         >ТУР</Link>
                     </li>
                     <li>
