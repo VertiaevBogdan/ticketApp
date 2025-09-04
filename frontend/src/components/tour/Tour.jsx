@@ -14,7 +14,8 @@ export default function Tour() {
     }, [])
 
     return (
-        <main className="flex flex-col justify-center items-center">
+        <body className="bg-[#0c0c0c]">
+            <main className="flex flex-col justify-center items-center">
             {tours.map((item) => (
                 <div key={item.id} className="flex items-center justify-between
                                             text-white text-[12px] w-[35em] mb-3">
@@ -40,6 +41,8 @@ export default function Tour() {
                 </div>
             </div>
             ))}
-        </main>
+                <TourFooter/>
+            </main>
+        </body>
     );
 }
