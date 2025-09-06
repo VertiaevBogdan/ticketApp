@@ -4,9 +4,12 @@ function Footer() {
         <footer className="flex items-center justify-between py-7">
             <nav className="inline-flex items-center space-x-11 text-white/40">
                 <span>2025</span>
-                <span>политика конфиденциальности</span>
-                <span>оферта</span>
-                <span>техподдержка</span>
+                <span className="cursor-pointer hover:text-white transition duration-150">
+                    политика конфиденциальности</span>
+                <span className="cursor-pointer hover:text-white transition duration-150"
+                    >оферта</span>
+                <span className="cursor-pointer hover:text-white transition duration-150"
+                    >техподдержка</span>
             </nav>
             <nav>
                 <ul className="inline-flex items-center space-x-11">

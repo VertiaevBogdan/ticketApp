@@ -8,23 +8,28 @@ function Header(){
                           className="w-[3.5em]"/>
                 <ul className="inline-flex items-center text-white/40 space-x-11">
                     <li>
-                        <Link to="/tour" className="relative cursor-pointer"
+                        <Link to="/tour" className="relative cursor-pointer
+                         hover:text-white transition duration-150"
                         >ТУР</Link>
                     </li>
                     <li>
-                        <Link to="/todolist" className="relative cursor-pointer"
+                        <Link to="/todolist" className="relative cursor-pointer
+                                hover:text-white transition duration-150"
                         >поддержать</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer
+                                hover:text-white transition duration-150"
                         >вещдок</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer
+                                hover:text-white transition duration-150"
                         >стендапы</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative cursor-pointer"
+                        <Link to="/lesson3" className="relative cursor-pointer
+                                hover:text-white transition duration-150"
                         >faq</Link>
                     </li>
                     <li>
