@@ -52,3 +52,7 @@
     letter-spacing: 0.4rem;
     writing-mode: vertical-rl;
 }
+
+.tour-bg-img {
+    background: url("/home/vertbo/ticketApp/frontend/public/img/tour/date-bg.png") no-repeat;
+}
