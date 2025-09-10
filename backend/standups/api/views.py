@@ -21,9 +21,9 @@ class StandupCardViewSet(viewsets.ModelViewSet):
         return qs
 
 class StandupTourViewSet(viewsets.ModelViewSet):
-    queryset = StandupTour.objects.all().order_by('id')
     serializer_class = StandupTourSerializer
+    queryset = StandupTour.objects.all().order_by('id')
 
 class FaqViewSet(viewsets.ModelViewSet):
     serializer_class = FaqSerializer
-    queryset = Faq.objects.all()
+    queryset = Faq.objects.all().order_by('id')

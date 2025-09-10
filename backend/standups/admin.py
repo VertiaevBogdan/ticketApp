@@ -12,4 +12,4 @@ class StandupTourAdmin(admin.ModelAdmin):
 
 @admin.register(Faq)
 class FaqAdmin(admin.ModelAdmin):
-    list_display = ('title', 'body')
+    list_display = ('id', 'title', 'body')
