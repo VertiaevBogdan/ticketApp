@@ -49,7 +49,7 @@ export default function Tour() {
                 </div>
             </div>
             ))}
-                <TourFooter/>
+
             </main>
         </body>
     );

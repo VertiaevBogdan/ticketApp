@@ -9,15 +9,11 @@ import VideoSection from "./VideoSection.jsx";
 
 function Layout() {
     return (
-            <main className="wrapper relative overflow-hidden bg-[#111111] rounded-3xl px-11">
-                <Header/>
-                <VideoSection/>
-                <Outlet/>
-                <Main/>
-                <TourBanner/>
-                <StandUpList/>
-                <Footer/>
-            </main>
+        <main className="wrapper relative overflow-hidden bg-[#111111] rounded-3xl px-11">
+            <Header/>
+            <Outlet/>
+            <Footer/>
+        </main>
     )
 }
 

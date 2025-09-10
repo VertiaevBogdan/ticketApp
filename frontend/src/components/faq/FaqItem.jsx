@@ -10,7 +10,7 @@ export default function FaqItem({items}){
 
     return(
 
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start my-8">
                 <h1 className="text-[3.5em] text-[#801219] font-black mb-10">FAQ</h1>
                 {items.map((item) => (
                         <article key={item.id} className="text-white border-b-[1px] border-b-[#801219] border-solid
@@ -24,7 +24,7 @@ export default function FaqItem({items}){
                                   fill="none"
                                   xmlns="http://www.w3.org/2000/svg"
                                   className={`w-3 transition-transform duration-200 ${
-                                    openId === item.id ? "rotate-45 text-red-500" : "rotate-0 text-white"
+                                    openId === item.id ? "rotate-135 text-red-500" : "rotate-0 text-white"
                                   }`}
                                 >
                                   <path

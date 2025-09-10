@@ -1,11 +1,14 @@
 import {Link} from "react-router";
+import {HashLink} from "react-router-hash-link";
 
 function Header(){
     return (
         <header className="border-gray-200 py-2.5 mt-2 z-50 relative">
             <nav className="wrapper h-10 flex justify-between items-center">
-                <img src="../../../public/img/logo.png" alt="logo"
+                <Link to="/">
+                    <img src="../../../public/img/logo.png" alt="logo"
                           className="w-[3.5em]"/>
+                </Link>
                 <ul className="inline-flex items-center text-white/40 space-x-11">
                     <li>
                         <Link to="/tour" className="relative cursor-pointer
@@ -23,9 +26,9 @@ function Header(){
                         >вещдок</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative cursor-pointer
+                        <HashLink smooth to="#standups" className="relative cursor-pointer
                                 hover:text-white transition duration-150"
-                        >стендапы</Link>
+                        >стендапы</HashLink>
                     </li>
                     <li>
                         <Link to="/faq" className="relative cursor-pointer
