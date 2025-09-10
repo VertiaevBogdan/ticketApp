@@ -48,3 +48,7 @@ class StandupTour(models.Model):
     def __str__(self):
         return self.city
 
+
+class Faq(models.Model):
+    title = models.CharField(max_length=100, null=False, blank=False)
+    body = models.TextField(null=False, blank=False)

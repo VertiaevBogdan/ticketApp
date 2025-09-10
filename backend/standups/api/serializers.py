@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from ..models import Standup, StandupTour
+from ..models import Standup, StandupTour, Faq
+
 
 class MainStandupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,4 +20,9 @@ class StandupSerializer(serializers.ModelSerializer):
 class StandupTourSerializer(serializers.ModelSerializer):
     class Meta:
         model = StandupTour
+        fields = '__all__'
+
+class FaqSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Faq
         fields = '__all__'

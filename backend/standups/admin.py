@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Standup, StandupTour
+from .models import Standup, StandupTour, Faq
 
 
 @admin.register(Standup)
@@ -9,3 +9,7 @@ class StandupAdmin(admin.ModelAdmin):
 @admin.register(StandupTour)
 class StandupTourAdmin(admin.ModelAdmin):
     list_display = ('id', 'city', 'sold_out')
+
+@admin.register(Faq)
+class FaqAdmin(admin.ModelAdmin):
+    list_display = ('title', 'body')

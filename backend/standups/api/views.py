@@ -1,6 +1,8 @@
 from rest_framework import viewsets
-from .serializers import StandupCardSerializer, StandupSerializer, StandupTourSerializer, MainStandupSerializer
-from ..models import Standup, StandupTour
+from .serializers import StandupCardSerializer, StandupSerializer, StandupTourSerializer, MainStandupSerializer, \
+    FaqSerializer
+from ..models import Standup, StandupTour, Faq
+
 
 class MainStandupCardViewSet(viewsets.ModelViewSet):
     serializer_class = MainStandupSerializer
@@ -21,3 +23,7 @@ class StandupCardViewSet(viewsets.ModelViewSet):
 class StandupTourViewSet(viewsets.ModelViewSet):
     queryset = StandupTour.objects.all().order_by('id')
     serializer_class = StandupTourSerializer
+
+class FaqViewSet(viewsets.ModelViewSet):
+    serializer_class = FaqSerializer
+    queryset = Faq.objects.all()

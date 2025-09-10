@@ -28,7 +28,7 @@ function Header(){
                         >стендапы</Link>
                     </li>
                     <li>
-                        <Link to="/lesson3" className="relative cursor-pointer
+                        <Link to="/faq" className="relative cursor-pointer
                                 hover:text-white transition duration-150"
                         >faq</Link>
                     </li>
