@@ -9,6 +9,7 @@ export default function FaqItem({items}){
     }
 
     return(
+
         <div className="flex flex-col items-start">
                 <h1 className="text-[3.5em] text-[#801219] font-black mb-10">FAQ</h1>
                 {items.map((item) => (
