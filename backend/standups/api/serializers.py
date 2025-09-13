@@ -15,7 +15,7 @@ class StandupCardSerializer(serializers.ModelSerializer):
 class StandupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Standup
-        fields = ['duration', 'created_at', 'city', 'subtitles', 'description', 'image', 'title', 'standup_url']
+        fields = ['duration', 'created_at', 'city', 'subtitles', 'description', 'image', 'title', 'standup_url', 'slug']
 
 class StandupTourSerializer(serializers.ModelSerializer):
     class Meta:

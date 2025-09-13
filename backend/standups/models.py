@@ -9,7 +9,7 @@ class Standup(models.Model):
     subtitles = models.TextField(max_length=5) # ENG, CZ, RUS...
     description = models.TextField(max_length=1000)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
-    slag = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(unique=True, blank=True)
     title = models.CharField(max_length=50)
     standup_url = models.URLField(null=True, blank=True)
     director = models.TextField(max_length=30, blank=True, null=True, default='')

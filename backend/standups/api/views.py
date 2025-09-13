@@ -8,6 +8,11 @@ class MainStandupCardViewSet(viewsets.ModelViewSet):
     serializer_class = MainStandupSerializer
     queryset = Standup.objects.filter(is_featured=True) #берём только актуальный стендап
 
+class StandupViewSet(viewsets.ModelViewSet):
+    serializer_class = StandupSerializer
+    queryset = Standup.objects.all()
+    lookup_field = 'slug'
+
 class StandupCardViewSet(viewsets.ModelViewSet):
     serializer_class = StandupCardSerializer
 
