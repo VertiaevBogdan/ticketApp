@@ -17,7 +17,7 @@ class StandupSerializer(serializers.ModelSerializer):
         model = Standup
         fields = ['duration', 'created_at', 'city', 'subtitles',
                   'description', 'image', 'title', 'standup_url',
-                  'slug', 'is_featured']
+                  'slug', 'is_featured', 'preview']
 
 class StandupTourSerializer(serializers.ModelSerializer):
     class Meta:
