@@ -14,8 +14,8 @@ function StandUpList() {
     }, []);
 
     return (
-        <section class="w-full mb-[100px]" id="standups">
-            <div class="border-top-line"></div>
+        <section className="w-full mb-[100px]" id="standups">
+            <div className="border-top-line"></div>
             <p className="text-[2.8rem] font-bold text-[#801219] mb-[1.5rem]">предыдущие стендапы</p>
 
             <div className="grid grid-flow-col relative ml-12">

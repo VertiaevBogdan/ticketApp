@@ -41,7 +41,7 @@ function VideoSection() {
                                         rounded-2xl">
                             <div className="px-5 py-4 text-[25px] flex flex-col
                                             font-black border-r-2 border-r-[#111111] border-dashed">
-                                <p class="flex flex-col items-center justify-center
+                                <p className="flex flex-col items-center justify-center
                                            hover:text-white transition hover:duration-400">
                                     <b>СМОТРЕТЬ</b>
                                     <br/>

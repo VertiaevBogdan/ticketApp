@@ -5,7 +5,7 @@ import api from "../../api/api.js";
 export default function StandupDescription() {
 
     const {slug} = useParams();
-    const [standupInfo, setStandupInfo] = useState(null);
+    const [standupInfo, setStandupInfo] = useState([]);
 
     useEffect(() => {
         api.get(`standup/${slug}/`)

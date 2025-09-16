@@ -1,8 +1,8 @@
  function TourBanner() {
     return (
-        <section class="w-full">
-            <div class="border-top-line"></div>
-            <p class="text-[2.8rem] font-bold text-[#801219] mb-[1.5rem]">новый стендап тур</p>
+        <section className="w-full">
+            <div className="border-top-line"></div>
+            <p className="text-[2.8rem] font-bold text-[#801219] mb-[1.5rem]">новый стендап тур</p>
             <img src="../../../public/img/tour/banner.png" alt="banner"
                  className="transform transition-transform
                  duration-300 ease-in-out hover:scale-[102%]"/>
