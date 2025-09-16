@@ -56,3 +56,26 @@
 .tour-bg-img {
     background: url("/home/vertbo/ticketApp/frontend/public/img/tour/date-bg.png") no-repeat;
 }
+
+.card-shadow {
+    box-shadow: rgb(10, 10, 10) 0 4px 32px 0;
+}
+
+.card-description-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: "title1 title2 title3 title4";
+    white-space: nowrap;
+    column-gap: 50px;
+}
+
+.grid-text{
+    grid-column: span 4;
+    line-height: 1.4;
+    white-space: initial;
+}
+
+.title1 { grid-area: title1; }
+.title2 { grid-area: title2; }
+.title3 { grid-area: title3; }
+.title4 { grid-area: title4; }

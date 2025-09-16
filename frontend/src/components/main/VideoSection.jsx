@@ -1,12 +1,26 @@
 import BackgroundVideo  from './BackgroundVideo.jsx'
 import BarsIcon from "./BarsIcon.jsx";
+import api from "../../api/api.js";
+import { useState, useEffect} from "react";
 
 function VideoSection() {
+
+    const [featured, setFeatured] = useState(null)
+
+    useEffect( () => {
+        api.get('standup/')
+            .then(res => {
+                const standups = res.data;
+                const featuredOne = standups.find(s => s.is_featured === true);
+                setFeatured(featuredOne);
+            });
+    }, []);
+
     return (
         <section className="flex flex-col relative
                             overflow-hidden rounded-t-3xl
                             h-[100vh] m-[calc(-1*73px-42px)]">
-            <BackgroundVideo/>
+            {featured && <BackgroundVideo standup={featured}/>}
             <div className="bg-gradient-custom"></div>
             <div className="grid grid-flow-col gap-[60px] absolute
                             top-0 right-0 left-0 bottom-auto justify-between
