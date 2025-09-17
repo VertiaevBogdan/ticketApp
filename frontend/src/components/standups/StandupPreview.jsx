@@ -1,3 +1,5 @@
+import YouTubeModal from "./YouTubeModal.jsx";
+
 export default function StandupPreview({standup}) {
     return(
         <section className="flex flex-col relative overflow-hidden
@@ -8,7 +10,7 @@ export default function StandupPreview({standup}) {
                 <div className="bg-gradient-custom"></div>
             </div>
             <div className="absolute grid grid-flow-col justify-between gap-[60px] items-end
-                            bottom-0 w-full py-[clamp(20px,6vh,43px)] px-[42px]">
+                            bottom-0 w-full py-[clamp(20px,6vh,43px)] px-[42px] animate-floatUp">
                 <span className="flex flex-col mb-6">
                     <div className="text-white/40 text-[20px] font-medium">18+</div>
                     <h1 className="mt-4 text-[96px] leading-[1.05] font-bold">
@@ -17,6 +19,7 @@ export default function StandupPreview({standup}) {
                     </h1>
                 </span>
             </div>
+            <YouTubeModal standup={standup}/>
         </section>
     );
 }

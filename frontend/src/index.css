@@ -79,3 +79,19 @@
 .title2 { grid-area: title2; }
 .title3 { grid-area: title3; }
 .title4 { grid-area: title4; }
+
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-floatUp {
+  animation: floatUp 0.8s ease-out forwards;
+}
