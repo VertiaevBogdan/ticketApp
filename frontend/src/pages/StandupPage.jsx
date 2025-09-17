@@ -19,7 +19,7 @@ export default function StandupPage(){
 
     return (
         <>
-            <StandupPreview standup={standup}/>
+            <StandupPreview key={slug} standup={standup}/>
             <StandupDescription standup={standup}/>
             <StandUpList/>
         </>
