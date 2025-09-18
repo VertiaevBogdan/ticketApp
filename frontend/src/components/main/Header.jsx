@@ -36,9 +36,11 @@ function Header(){
                         >faq</Link>
                     </li>
                     <li>
-                        <button className="relative bg-[#111111] px-5 py-1.5 rounded-lg
-                        text-white cursor-pointer font-bold items-center hover:bg-[#171717] duration-100"
+                        <Link to="/login">
+                            <button className="relative bg-[#111111] px-5 py-1.5 rounded-lg
+                                 text-white cursor-pointer font-bold items-center hover:bg-[#171717] duration-100"
                         >вход</button>
+                        </Link>
                     </li>
                 </ul>
             </nav>
