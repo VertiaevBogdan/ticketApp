@@ -1,6 +1,6 @@
 from rest_framework.routers import DefaultRouter
 
-from .views import StandupCardViewSet, StandupTourViewSet, MainStandupCardViewSet, FaqViewSet, StandupViewSet
+from .api.views import StandupCardViewSet, StandupTourViewSet, MainStandupCardViewSet, FaqViewSet, StandupViewSet
 
 router = DefaultRouter()
 
