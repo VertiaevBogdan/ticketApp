@@ -37,7 +37,7 @@ export default function RegisterPage() {
         }
 
         try {
-            await api.post("/users/register", {
+            await api.post("/users/register/", {
                 name: formData.name,
                 email: formData.email,
                 password: formData.password,
@@ -86,15 +86,13 @@ export default function RegisterPage() {
                     className="text-center border-b border-solid border-white/40
                                  outline-none p-3"/>
                 {error && <p className="text-[#801219] text-[16px] mt-3">{error}</p>}
-                <Link to="/register">
-                    <button
+                <button
                         type="submit"
                         className="flex items-center mb-5 bg-[#801219] p-3 cursor-pointer
                                     rounded-lg h-9 w-[258px] justify-center mt-4 text-[17px]
                                     hover:bg-[#951b22] transition duration-200">
                     зарегестрироваться
                 </button>
-                </Link>
                 <button className="text-white/40 text-[16px] border-b border-white/40
                                     cursor-pointer hover:text-white hover:border-white
                                      transition duration-200">
