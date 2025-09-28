@@ -1,3 +1,6 @@
+import {Link} from "react-router";
+import RegisterPage from "./RegisterPage.jsx";
+
 export default function LoginPage(){
     return(
          <section className="flex justify-center my-[5em] p-[68px]">
@@ -14,18 +17,20 @@ export default function LoginPage(){
                 <button className="flex items-center mb-5 bg-[#801219] p-3 cursor-pointer
                                     rounded-lg h-9 w-[258px] justify-center mt-4 text-[17px]
                                     hover:bg-[#951b22] transition duration-200">
-                    зарегестрироваться
+                    войти
                 </button>
                 <button className="text-white/40 text-[16px] border-b border-white/40
                                     cursor-pointer hover:text-white hover:border-white
                                      transition duration-200">
                     я не помню пароль
                 </button>
-                <button className="text-white/40 text-[16px] border-b border-white/40
+                <Link to="/register">
+                    <button className="text-white/40 text-[16px] border-b border-white/40
                                     cursor-pointer hover:text-white hover:border-white
                                      transition duration-200">
                     регистрация
                 </button>
+                </Link>
             </form>
         </section>
     );
