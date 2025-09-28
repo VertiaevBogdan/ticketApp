@@ -5,7 +5,7 @@ import {useState} from "react";
 export default function RegisterPage() {
 
     const [formData, setFormData] = useState({
-        name: "",
+        username: "",
         email: "",
         password: "",
         confirmPassword: "",
@@ -38,13 +38,23 @@ export default function RegisterPage() {
 
         try {
             await api.post("/users/register/", {
-                name: formData.name,
+                username: formData.name,
                 email: formData.email,
                 password: formData.password,
             });
+
+            setFormData({
+                username: "",
+                email: "",
+                password: "",
+                confirmPassword: "",
+            });
+            setError("");
         } catch (err) {
             console.error(err);
         }
+
+
     }
 
     return(

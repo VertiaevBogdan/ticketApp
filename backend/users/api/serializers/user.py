@@ -6,7 +6,7 @@ from ...models.user import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['name', 'email']
+        fields = ['username', 'email']
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
@@ -14,11 +14,11 @@ class UserRegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['name', 'email', 'password']
+        fields = ['username', 'email', 'password']
 
     def create_user(self, validated_data):
         user = User.objects.create_user(
-            name=validated_data['name'],
+            username=validated_data['username'],
             email = validated_data['email'],
             password = validated_data['password'],
         )
