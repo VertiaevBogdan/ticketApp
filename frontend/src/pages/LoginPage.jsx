@@ -1,6 +1,6 @@
 import {Link} from "react-router";
 import {useState} from "react";
-import api from "../api/api.js";
+import {getCsrfToken, login} from "../api/auth.js";
 
 
 export default function LoginPage(){
@@ -25,21 +25,15 @@ export default function LoginPage(){
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        try {
-            await api.post('/users/login/', {
-                email: loginData.email,
-                password: loginData.password,
-            });
+        const csrfToken = await getCsrfToken();
+        const result = await login(loginData.email, loginData.password, csrfToken);
 
-            setLoginData({
-                email: '',
-                password: '',
-            });
-
-        } catch (err) {
-            console.error(err);
+        if (result.success) {
+            alert("Login success")
+        } else {
+            alert("Error: " + result.error);
         }
-    };
+    }
 
     return(
          <section className="flex justify-center my-[5em] p-[68px]">
