@@ -1,15 +1,45 @@
 import {Link} from "react-router";
 import {useState} from "react";
+import api from "../api/api.js";
 
 
 export default function LoginPage(){
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("")
+    const [loginData, setLoginData] = useState({
+        email: "",
+        password: "",
+    });
 
-    const handleSubmit = (event) => {
+    const handleChange = (event) => {
+
+        const {name, value} = event.target;
+
+        setLoginData({
+            ...loginData,
+            [name]: value,
+        });
+
+    };
+
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-    }
+
+        try {
+            await api.post('/users/login/', {
+                email: loginData.email,
+                password: loginData.password,
+            });
+
+            setLoginData({
+                email: '',
+                password: '',
+            });
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     return(
          <section className="flex justify-center my-[5em] p-[68px]">
@@ -17,10 +47,18 @@ export default function LoginPage(){
                             items-center justify-center text-white max-w-[320px]
                             p-[26px] rounded-3xl">
                 <h1 className="font-bold text-[1.8rem] mb-[30px] text-center">вход</h1>
-                <input type="email" value={email} placeholder="email"
+                <input
+                    onChange={handleChange}
+                    type="email"
+                    value={loginData.email}
+                    placeholder="email"
                     className="text-center border-b border-solid border-white/40
                                  outline-none p-3"/>
-                <input type="password" value={password} placeholder="пароль"
+                <input
+                    onChange={handleChange}
+                    type="password"
+                    value={loginData.password}
+                    placeholder="пароль"
                     className="text-center border-b border-solid border-white/40
                                  outline-none p-3"/>
                 <button className="flex items-center mb-5 bg-[#801219] p-3 cursor-pointer

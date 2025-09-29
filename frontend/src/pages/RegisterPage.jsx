@@ -9,7 +9,7 @@ export default function RegisterPage() {
         email: "",
         password: "",
         confirmPassword: "",
-    })
+    });
     const [error, setError] = useState("");
 
     const handleChange = (event) => {
