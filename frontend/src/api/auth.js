@@ -2,25 +2,22 @@ import api from "./api.js";
 
 // login
 export  async function login(email, password, csrfToken){
-  const response = await api.get('/users/login/', {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
-      },
-      body: JSON.stringlify({email, password}),
-  });
+  const response = await api.post(
+      'users/login/',
+      {email, password},
+    {
+        withCredentials: true,
+        headers: {"X-CSRFToken": csrfToken},
+    }
+  );
 
-  return await response.json();
+  return await response.data;
 }
 
 export async function getCsrfToken(){
-    const response = api.get("/users/csrf/",{
-     method: "GET",
-     credentials: "include",
+    const response = api.get("users/csrf/",{
+     withCredentials: true,
     });
 
-    const data = await response.json();
-    return data.csrfToken;
+    return response.data.csrfToken;
 }

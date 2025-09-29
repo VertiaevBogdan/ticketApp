@@ -11,7 +11,6 @@ export default function LoginPage(){
     });
 
     const handleChange = (event) => {
-
         const {name, value} = event.target;
 
         setLoginData({
@@ -43,6 +42,7 @@ export default function LoginPage(){
                 <h1 className="font-bold text-[1.8rem] mb-[30px] text-center">вход</h1>
                 <input
                     onChange={handleChange}
+                    name="email"
                     type="email"
                     value={loginData.email}
                     placeholder="email"
@@ -50,6 +50,7 @@ export default function LoginPage(){
                                  outline-none p-3"/>
                 <input
                     onChange={handleChange}
+                    name="password"
                     type="password"
                     value={loginData.password}
                     placeholder="пароль"
