@@ -103,11 +103,13 @@ export default function RegisterPage() {
                                     hover:bg-[#951b22] transition duration-200">
                     зарегестрироваться
                 </button>
-                <button className="text-white/40 text-[16px] border-b border-white/40
+                <Link to="/login">
+                    <button className="text-white/40 text-[16px] border-b border-white/40
                                     cursor-pointer hover:text-white hover:border-white
                                      transition duration-200">
-                    вход
-                </button>
+                        вход
+                    </button>
+                </Link>
             </form>
         </section>
     )
