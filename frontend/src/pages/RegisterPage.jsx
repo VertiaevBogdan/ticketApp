@@ -14,16 +14,16 @@ export default function RegisterPage() {
 
     const handleChange = (event) => {
 
-        const {name, value} = event.target;
+        const {username, value} = event.target;
 
         setFormData({
             ...formData,
-            [name]: value,
+            [username]: value,
         });
 
-        if (name === "confirmPassword" && value !== formData.password){
+        if (username === "confirmPassword" && value !== formData.password){
             setError("пароли не совпадают")
-        } else if ( name === "confirmPassword" && value === formData.password) {
+        } else if (username === "confirmPassword" && value === formData.password) {
             setError("");
         }
     };
@@ -37,8 +37,8 @@ export default function RegisterPage() {
         }
 
         try {
-            await api.post("/users/register/", {
-                username: formData.name,
+            await api.post("users/register/", {
+                username: formData.username,
                 email: formData.email,
                 password: formData.password,
             });
@@ -65,9 +65,9 @@ export default function RegisterPage() {
                 <h1 className="font-bold text-[1.8rem] mb-[30px] text-center">регистрация</h1>
                 <input
                     type="text"
-                    name="name"
+                    name="username"
                     placeholder="имя"
-                    value={formData.name}
+                    value={formData.username}
                     onChange={handleChange}
                        className="text-center border-b border-solid border-white/40
                                  outline-none p-3"/>
