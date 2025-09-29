@@ -7,7 +7,7 @@ export default function Faq() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        api.get('faq/')
+        api.get('standups/faq/')
             .then(res => setData(res.data))
             .catch(err => console.error(err))
     }, []);

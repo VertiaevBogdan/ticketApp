@@ -8,7 +8,7 @@ export default function Tour() {
     const [tours, setTours] = useState([])
 
     useEffect( () => {
-        api.get('standupTour/')
+        api.get('standups/standupTour/')
             .then(res => setTours(res.data))
             .catch(err => console.log(err));
     }, [])

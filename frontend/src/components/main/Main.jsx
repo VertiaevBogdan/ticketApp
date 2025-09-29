@@ -15,7 +15,7 @@ function Main() {
     const [mainCard, SetMainCard] = useState([]);
 
     useEffect( () => {
-        api.get('mainStandup/')
+        api.get('standups/mainStandup/')
             .then(res => SetMainCard(res.data))
             .catch(err => console.error(err))
     },[]);

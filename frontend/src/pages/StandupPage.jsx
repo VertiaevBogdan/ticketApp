@@ -12,7 +12,7 @@ export default function StandupPage(){
     const [standup, setStandup] = useState([]);
 
     useEffect(() => {
-        api.get(`standup/${slug}/`)
+        api.get(`standups/standup/${slug}/`)
             .then(res => setStandup(res.data))
             .catch(err => console.error(err))
     }, [slug]);

@@ -9,7 +9,7 @@ function StandUpList() {
     const [standupCards, setStandapCards] = useState([]);
 
     useEffect(() => {
-        api.get('standupCards/')
+        api.get('standups/standupCards/')
             .then(res => setStandapCards(res.data))
             .catch(err => console.error(err));
     }, []);

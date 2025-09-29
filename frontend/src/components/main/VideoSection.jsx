@@ -8,7 +8,7 @@ function VideoSection() {
     const [featured, setFeatured] = useState(null)
 
     useEffect( () => {
-        api.get('standup/')
+        api.get('standups/standup/')
             .then(res => {
                 const standups = res.data;
                 const featuredOne = standups.find(s => s.is_featured === true);
