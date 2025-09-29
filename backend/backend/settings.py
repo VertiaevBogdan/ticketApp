@@ -71,7 +71,8 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7)
 }
 
-CORS_ALLOW_ALL_ORIGINS = True  ## открыт доступ ко всему (долько пока дебаг)
+CORS_ALLOW_ALL_ORIGINS = True  ## open for all (only for debug mode)
+CORS_ALLOW_CREDENTIALS = True ## enable cookies
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -101,8 +102,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'standups_db',
         'USER': 'standups_user',
-        'PASSWORD': 'postgres',  # поставь свой пароль
-        'HOST': 'db',                 # имя сервиса в docker-compose
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
         'PORT': 5432,
     }
 }
