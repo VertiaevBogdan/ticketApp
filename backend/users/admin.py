@@ -7,6 +7,6 @@ from .models import User
 @admin.register(User)
 class CustomUser(UserAdmin):
     model = User
-    list_display = ('id','name', 'email', 'password', 'is_paid', 'created_at', 'updated_at')
-    search_fields = ('name', 'email','is_paid')
+    list_display = ('id','username', 'email', 'password', 'is_paid', 'created_at', 'updated_at')
+    search_fields = ('username', 'email','is_paid')
     ordering = ('created_at', 'id',)
