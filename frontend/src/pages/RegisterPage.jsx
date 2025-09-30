@@ -1,4 +1,4 @@
-import api from "../api/api.js";
+import {registerUser} from "../api/auth.js";
 import {Link} from "react-router";
 import {useState} from "react";
 
@@ -37,11 +37,11 @@ export default function RegisterPage() {
         }
 
         try {
-            await api.post("users/register/", {
+            await registerUser({
                 username: formData.username,
                 email: formData.email,
                 password: formData.password,
-            });
+            })
 
             setFormData({
                 username: "",

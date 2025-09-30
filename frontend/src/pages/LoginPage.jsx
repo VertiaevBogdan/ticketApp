@@ -1,6 +1,6 @@
 import {Link} from "react-router";
 import {useState} from "react";
-import {getCsrfToken, login} from "../api/auth.js";
+import {getCsrfToken, loginUser} from "../api/auth.js";
 
 
 export default function LoginPage(){
@@ -25,7 +25,7 @@ export default function LoginPage(){
         event.preventDefault();
 
         const csrfToken = await getCsrfToken();
-        const result = await login(loginData.email, loginData.password, csrfToken);
+        const result = await loginUser(loginData.email, loginData.password, csrfToken);
 
         if (result.success) {
             alert("Login success")

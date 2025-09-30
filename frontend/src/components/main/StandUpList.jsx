@@ -1,17 +1,16 @@
 import { useEffect, useState} from "react";
-import api from '../../api/api.js'
-import StandUpCard from "./StandUpCard.jsx";
 import {Link} from "react-router";
+import {getStandupCards} from "../../api/standup.js";
 
 
 function StandUpList() {
 
-    const [standupCards, setStandapCards] = useState([]);
+    const [standupCards, setStandupCards] = useState([]);
 
     useEffect(() => {
-        api.get('standups/standupCards/')
-            .then(res => setStandapCards(res.data))
-            .catch(err => console.error(err));
+        getStandupCards()
+            .then(res => setStandupCards(res.data))
+            .catch(err => console.error(err))
     }, []);
 
     return (

@@ -1,17 +1,16 @@
-import api from '../../api/api.js'
 import { useEffect, useState } from "react";
-import TourFooter from "./TourFooter.jsx";
+import {getStandupTour} from "../../api/standup.js";
 
 
 export default function Tour() {
 
     const [tours, setTours] = useState([])
 
-    useEffect( () => {
-        api.get('standups/standupTour/')
+    useEffect(() => {
+        getStandupTour()
             .then(res => setTours(res.data))
-            .catch(err => console.log(err));
-    }, [])
+            .catch(err => console.error(err));
+    }, []);
 
     return (
         <body className="bg-[#0c0c0c]

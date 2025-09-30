@@ -1,7 +1,7 @@
 import api from "./api.js";
 
 // login
-export  async function login(email, password, csrfToken){
+export  async function loginUser(email, password, csrfToken){
   const response = await api.post(
       'users/login/',
       {email, password},
@@ -20,4 +20,8 @@ export async function getCsrfToken(){
     });
 
     return response.data.csrfToken;
+}
+
+export async function registerUser(userData){
+    return await api.post("users/register/", userData);
 }

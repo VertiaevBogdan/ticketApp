@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import api from "../../api/api.js";
+import {getMainStandup} from "../../api/standup.js";
 
 function Main() {
 
@@ -12,13 +12,13 @@ function Main() {
     ];
 
 
-    const [mainCard, SetMainCard] = useState([]);
+    const [mainCard, setMainCard] = useState([]);
 
-    useEffect( () => {
-        api.get('standups/mainStandup/')
-            .then(res => SetMainCard(res.data))
-            .catch(err => console.error(err))
-    },[]);
+    useEffect(() => {
+        getMainStandup()
+            .then(res => setMainCard(res.data))
+            .catch(err => console.error(err));
+    }, []);
 
     return (
             <section className="mt-[7em] grid justify-between gap-[60px] grid-flow-col items-start">

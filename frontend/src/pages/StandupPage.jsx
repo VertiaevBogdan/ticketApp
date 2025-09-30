@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import api from "../api/api.js"
 import StandUpList from "../components/main/StandUpList.jsx";
 import StandupDescription from "../components/standups/StandupDescription.jsx";
 import StandupPreview from "../components/standups/StandupPreview.jsx";
+import {getStandup} from "../api/standup.js";
 
 
 export default function StandupPage(){
@@ -12,9 +12,9 @@ export default function StandupPage(){
     const [standup, setStandup] = useState([]);
 
     useEffect(() => {
-        api.get(`standups/standup/${slug}/`)
+        getStandup(slug)
             .then(res => setStandup(res.data))
-            .catch(err => console.error(err))
+            .catch(err => console.error(err));
     }, [slug]);
 
     return (

@@ -1,19 +1,19 @@
 import BackgroundVideo  from './BackgroundVideo.jsx'
 import BarsIcon from "./BarsIcon.jsx";
-import api from "../../api/api.js";
 import { useState, useEffect} from "react";
+import {getStandup} from "../../api/standup.js";
 
 function VideoSection() {
 
     const [featured, setFeatured] = useState(null)
 
-    useEffect( () => {
-        api.get('standups/standup/')
+    useEffect(() => {
+        getStandup()
             .then(res => {
                 const standups = res.data;
-                const featuredOne = standups.find(s => s.is_featured === true);
+                const featuredOne = standups.find(standup => standup.is_featured === true);
                 setFeatured(featuredOne);
-            });
+        })
     }, []);
 
     return (
